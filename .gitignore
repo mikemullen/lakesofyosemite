@@ -1,0 +1,6 @@
+# Ignore default database
+/*.sqlite3
+
+# Ignore other unneeded files
+
+.DS_Store
