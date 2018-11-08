@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Muli:200,600" rel="stylesheet">
+	<title>Lakes of Yosemite Development Site</title>
+</head>
+<body>
+	<div class="topbar">
+		<header>
+			<span class="logo">Lakes of Yosemite</span>
+			<span class="mainnav"><a href="#">About</a> | <a href="#">Lakes</a> | <a href="#">Notes</a></span>
+		</header>
+	</div>
+	<div class="mainstage">
+	{% block content %}
+	{% endblock %}
+	</div>
+	<div class="bottombar">
+		<footer>
+			<div class="footdate">
+				<p>Last Updated: October 23, 2018</p>
+				<p>Copyright 2018</p>
+				<p>Web Design by Mullen Design</p>
+			</div>
+			<div class="footsocial"><img src="{% static 'images/Instagram.svg' %}"></div>
+			<div class="footlinks">
+				<ul>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Lakes</a></li>
+					<li><a href="#">Notes</a></li>
+					<li><a href="#">Home</a></li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

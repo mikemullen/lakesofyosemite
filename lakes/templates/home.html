@@ -1,1 +1,23 @@
-Home
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="mainmap">
+	<h1 class="introline">Journey to the <span class="bigblue">167</span> Lakes of Yosemite</h1>
+	<div class="fullmapimg"><img src="{% static 'images/fullmap.svg' %}"></div>
+	<div class="mapsidebarright">
+		<p><span class="big unvisited">68</span> lakes remaining to visit</p>
+		<p><span class="big visited">99</span> lakes visited so far</p>
+		<p><span class="big">450</span> miles hiked</p>
+		<p><span class="big">11,445'</span> elevation of highest lake: Maclure Lake</p>
+		<p><span class="big">79</span> lakes with no trails</p>
+		<p><span class="big">177.89</span> acres of largest lake: Tenaya Lake</p>
+		<p><span class="big">1.63</span> acres of smallest lake: Shamrock Lake</p>
+		<p class="recenttrip">Date of most recent trip: October 9th - 13th, 2018</p>
+		<p class="recenttrip">Start date: May 2016</p>
+		<p class="recenttrip">Projected end date: October 2021</p>
+		</div>
+</div>
+
+
+{% endblock %}
