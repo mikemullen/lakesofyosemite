@@ -1,8 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.http import Http404
+
+from .models import Lake
 
 def home(request):
-	return HttpResponse('<p>home view</p>')
+	return render(request, 'home.html')
 
 def lake_detail(request, id):
-	return HttpResponse('<p>lake_detail view with id {}</p>'.format(id))
+	try:
+		lake = Lake.objects.get(id=id)
+	except Lake.DoesNotExist:
+		raise Http404('Lake not found')
+	return render(request, 'lake_detail.html', {'lake': lake})
