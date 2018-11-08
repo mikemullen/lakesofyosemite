@@ -11,7 +11,7 @@
 <body>
 	<div class="topbar">
 		<header>
-			<span class="logo">Lakes of Yosemite</span>
+			<a href="{% url 'home' %}"><span class="logo">Lakes of Yosemite</span></a>
 			<span class="mainnav"><a href="#">About</a> | <a href="#">Lakes</a> | <a href="#">Notes</a></span>
 		</header>
 	</div>
@@ -33,7 +33,7 @@
 					<li><a href="#">About</a></li>
 					<li><a href="#">Lakes</a></li>
 					<li><a href="#">Notes</a></li>
-					<li><a href="#">Home</a></li>
+					<li><a href="{% url 'home' %}">Home</a></li>
 				</ul>
 			</div>
 		</footer>
