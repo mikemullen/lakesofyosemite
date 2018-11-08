@@ -1,1 +1,20 @@
-Lake Detail Page
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="lakecard">
+		<h2 class="lakename">{{ lake.name }}</h2>
+		<div class="elevation">elevation in feet:</div>
+		<div class="size">surface area in acres:</div>
+		<div class="location">lat lon location:</div>
+		<div class="lakeelevation">{{ lake.elevation }}</div>
+		<div class="lakesize">{{ lake.size }}</div>
+		<div class="lakelatlon">{{ lake.lat }}, {{ lake.lon }}</div>
+		<div class="lakeoutline"><img src="{% static 'images/Tilden.svg' %}"></div>
+		<div class="lakemap"><img src="{% static 'images/TildenMap.svg' %}"></div>
+		<div class="lakedrainagelable">watershed:</div>
+		<div class="lakedrainagetree">Tilden Creek <img src="assets/rarrow.svg"> Falls Creek <img src="assets/rarrow.svg"> Tuolumne River</div>
+	</div>
+	</div>
+
+{% endblock %}
