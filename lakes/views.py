@@ -13,3 +13,7 @@ def lake_detail(request, id):
 	except Lake.DoesNotExist:
 		raise Http404('Lake not found')
 	return render(request, 'lake_detail.html', {'lake': lake})
+
+def lakes_lists(request):
+	lakes = Lake.objects.all()
+	return render(request, 'lakes_lists.html', {'lakes': lakes})

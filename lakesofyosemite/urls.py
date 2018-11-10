@@ -7,4 +7,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
     url(r'^lakes/(\d+)/', views.lake_detail, name='lake_detail'),
+    url(r'^lakes_lists/', views.lakes_lists, name='lakes_lists'),
 ]
+

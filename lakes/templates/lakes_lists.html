@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<h1>Lakes Lists</h1>
+<ul>
+	{% for lake in lakes %}
+		<a href="{% url 'lake_detail' lake.id %}">
+			<li>{{ lake.name|capfirst }}</li>
+		</a>
+	{% endfor %}
+
+</ul>
+
+{% endblock %}
