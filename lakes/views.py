@@ -7,9 +7,9 @@ from .models import Lake
 def home(request):
 	return render(request, 'home.html')
 
-def lake_detail(request, id):
+def lake_detail(request, slug):
 	try:
-		lake = Lake.objects.get(id=id)
+		lake = Lake.objects.get(slug=slug)
 	except Lake.DoesNotExist:
 		raise Http404('Lake not found')
 	return render(request, 'lake_detail.html', {'lake': lake})
