@@ -3,7 +3,9 @@
 {% block content %}
 
 <div class="lakecard">
+		<div class="statsicon"><img src="{% static 'images/stats_icon.svg' %}" alt="Lake Stats"></div>
 		<h2 class="lakename">{{ lake.name }}</h2>
+		<div class="photoicon"><a href="{% url 'lake_images' lake.slug %}"><img src="{% static 'images/photo_icon.svg' %}" alt="Lake Photos"></a></div>
 		<div class="elevation">elevation in feet:</div>
 		<div class="size">surface area in acres:</div>
 		<div class="location">lat lon location:</div>

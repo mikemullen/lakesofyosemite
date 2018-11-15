@@ -132,7 +132,7 @@ a:hover {
 	font-weight: 100;
 	text-align: center;
 
-	width: 90%;
+	width: 88%;
 	max-width: 1800px;
 
 	margin: auto;
@@ -166,15 +166,38 @@ a:hover {
 	text-align: center;
 	text-transform: uppercase;
 	border-bottom: 1px solid #e6e6e6;
-	grid-column: 1 / 5;
+	grid-column: 2 / 4;
 	grid-row: 1;
 	color: #585858;
 }
 
-.lakename img {
+.photoicon {
+	border-bottom: 1px solid #e6e6e6;
+	grid-column: 4 / 5;
+	grid-row: 1;
+}
+
+.photoicon img {
+	height: 2.4em;
+	float: right;
+}
+
+.statsicon {
+	border-bottom: 1px solid #e6e6e6;
+	grid-column: 1 / 2;
+	grid-row: 1;
+}
+
+.statsicon img {
+	height: 2.4em;
+
+	float: left;
+}
+
+/**.lakename img {
 	height: 1em;
 	vertical-align: -.15em;
-}
+}**/
 
 .elevation {
 	font-size: small;
