@@ -6,7 +6,7 @@
 	<div class="statsicon"><a href="{% url 'lake_detail' lake.slug %}"><img src="{% static 'images/stats_icon.svg' %}" alt="Lake Stats"></a></div>
 	<h2 class="lakename">{{ lake.name }}</h2>
 	<div class="photoicon"><img src="{% static 'images/photo_icon.svg' %}" alt="Lake Photos"></div>
-	<div class="lakeimg"><img src="{% static 'images/boundary.jpg' %}"></div>
+	<div class="lakeimg"><img src="{{ lake.image.url }}"></div>
 	<div class="lakeimgdetails">{{ lake.elevation }} |  August 24, 2017 </div>
 </div>
 
