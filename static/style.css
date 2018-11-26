@@ -12,6 +12,13 @@ h2 {
 	margin: 0;
 }
 
+/** tester class **/
+
+.test {
+	color: red;
+	border: 1px solid red;
+}
+
 .topbar {
 	width: 100%;
 	padding-top: 5px;
@@ -126,6 +133,21 @@ a:hover {
 }
 
 /** Lakecard grid and display styles **/
+
+.lakecarddup {
+	font-size: large;
+	font-weight: 100;
+	text-align: center;
+
+	width: 88%;
+	max-width: 1800px;
+
+	margin: auto;
+	background-color: white;
+	border: 1px solid #e6e6e6;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
 
 .lakecard {
 	font-size: large;
@@ -277,6 +299,10 @@ a:hover {
 	height: 1em;
 	vertical-align: -.15em;
 }
+
+/** Lakes Lists Styles **/
+
+
 
 /** Footer Styles **/
 
