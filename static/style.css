@@ -19,6 +19,8 @@ h2 {
 	border: 1px solid red;
 }
 
+/** **/
+
 .topbar {
 	width: 100%;
 	padding-top: 5px;
@@ -133,21 +135,6 @@ a:hover {
 }
 
 /** Lakecard grid and display styles **/
-
-.lakecarddup {
-	font-size: large;
-	font-weight: 100;
-	text-align: center;
-
-	width: 88%;
-	max-width: 1800px;
-
-	margin: auto;
-	background-color: white;
-	border: 1px solid #e6e6e6;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-}
 
 .lakecard {
 	font-size: large;
@@ -302,7 +289,36 @@ a:hover {
 
 /** Lakes Lists Styles **/
 
+.listdisplay {
+	width: 90%;
+	margin: auto;
+}
 
+.listdisplay h1 {
+	padding-left: 1.25em;
+}
+
+.fulllist {
+	list-style: none;
+	column-count: 3;
+	-webkit-column-width: 100px; /* Chrome, Safari, Opera */
+    -moz-column-width: 100px; /* Firefox */
+    column-width: 100px;
+	-moz-column-fill: balance; /* Firefox */
+    column-fill: balance;
+    text-align: left;
+    -webkit-column-rule: 1px solid #e6e6e6; /* Chrome, Safari, Opera */
+    -moz-column-rule: 1px solid #e6e6e6; /* Firefox */
+    column-rule: 1px solid #e6e6e6;
+    column-gap: 3em;
+    padding-bottom: 1.25em;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.listdisplay a {
+	text-transform: none;
+	
+}
 
 /** Footer Styles **/
 

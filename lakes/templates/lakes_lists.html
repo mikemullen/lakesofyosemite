@@ -1,37 +1,38 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<h1>Explore the <span class="bigblue"> 167 </span> named lakes of Yosemite</h1>
-<div class="">
-All Lakes
-<ul>
-	{% for lake in lakes %}
-		<a href="{% url 'lake_detail' lake.slug %}">
-			<li>{{ lake.name|capfirst }} - {{ lake.elevation }}'</li>
-		</a>
-	{% endfor %}
+<div class="listdisplay">
+	<h1>Explore the <span class="bigblue">167</span> named lakes of Yosemite</h1>
+	<div>
+		<ul class="fulllist">
+			{% for lake in lakes %}
+				<li>
+					<a href="{% url 'lake_detail' lake.slug %}">{{ lake.name }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+	
+		<div class="">
+			<h2>Top 10 Lakes by Elevation</h2>
+			<ul>
+				{% for lake in lakesTopTenByElevation %}
+					<a href="{% url 'lake_detail' lake.slug %}">
+						<li>{{ lake.name|capfirst }} - {{ lake.elevation }}'</li>
+					</a>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="">
+			<h2>Top 10 Lakes by Area</h2>
+			<ul>
+				{% for lake in lakesTopTenByArea %}
+					<a href="{% url 'lake_detail' lake.slug %}">
+						<li>{{ lake.name|capfirst }} - {{ lake.size }} acres</li>
+					</a>
+				{% endfor %}
+			</ul>
+		</div>
 
-</ul>
 </div>
-<div class="">
-	<h2>Top 10 Lakes by Elevation</h2>
-	<ul>
-		{% for lake in lakesTopTenByElevation %}
-			<a href="{% url 'lake_detail' lake.slug %}">
-				<li>{{ lake.name|capfirst }} - {{ lake.elevation }}'</li>
-			</a>
-		{% endfor %}
-	</ul>
-</div>
-<div class="">
-	<h2>Top 10 Lakes by Area</h2>
-	<ul>
-		{% for lake in lakesTopTenByArea %}
-			<a href="{% url 'lake_detail' lake.slug %}">
-				<li>{{ lake.name|capfirst }} - {{ lake.size }} acres</li>
-			</a>
-		{% endfor %}
-	</ul>
-</div>
-
 {% endblock %}
