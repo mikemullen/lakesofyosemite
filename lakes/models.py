@@ -11,7 +11,9 @@ class Lake(models.Model):
 	trailaccess = models.CharField(choices=TRAIL_ACCESS_CHOICES, max_length=1, blank=True)
 	drainages = models.ManyToManyField('Drainage', blank=True)
 	image = models.ImageField(upload_to="lake_images", blank=True)
-	imagedate = models.DateField(null=True)
+	imagedate = models.DateField(blank=True, null=True)
+	locationmap = models.FileField(upload_to="locationmaps", blank=True)
+	lakeoutline = models.FileField(upload_to="lakeoutlines", blank=True)
 
 class Drainage(models.Model):
 	name = models.CharField(max_length=100)

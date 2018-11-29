@@ -22,7 +22,7 @@ def lake_images(request, slug):
 	return render(request, 'lake_images.html', {'lake': lake})
 
 def lakes_lists(request):
-	lakes = Lake.objects.all()
+	lakes = Lake.objects.order_by('-name')
 	lakesTopTenByElevation = Lake.objects.order_by('-elevation')[0:10]
 	lakesTopTenByArea = Lake.objects.order_by('-size')[0:10]
 
