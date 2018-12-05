@@ -13,7 +13,7 @@
 		<div class="lakesize">{{ lake.size }}</div>
 		<div class="lakelatlon">{{ lake.lat }}, {{ lake.lon }}</div>
 		<div class="lakeoutline"><img src="{{ lake.lakeoutline.url }}"></div>
-		<div class="lakemap"><img src="{% static 'images/TildenMap.svg' %}"></div>
+		<div class="lakemap"><img src="{{ lake.locationmap.url }}"></div>
 		<div class="lakedrainagelable">watershed:</div>
 		<div class="lakedrainagetree">Tilden Creek <img src="assets/rarrow.svg"> Falls Creek <img src="assets/rarrow.svg"> Tuolumne River</div>
 </div>
