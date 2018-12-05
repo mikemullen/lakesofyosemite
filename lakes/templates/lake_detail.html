@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
+<button class="prevButton">Prev</button>
+<button class="nextButton">Next</button>
 <div class="lakecard">
 		<div class="statsicon"><img src="{% static 'images/stats_icon.svg' %}" alt="Lake Stats"></div>
 		<h2 class="lakename">{{ lake.name }}</h2>

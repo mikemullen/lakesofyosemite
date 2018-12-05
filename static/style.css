@@ -134,6 +134,20 @@ a:hover {
 	grid-row: 1;
 }
 
+/** Prev and Next Buttons **/
+
+.prevButton {
+	position: absolute;
+	top: 300px;
+	left: 15px;
+}
+
+.nextButton {
+	position: absolute;
+	top: 300px;
+	right: 15px;
+}
+
 /** Lakecard grid and display styles **/
 
 .lakecard {
