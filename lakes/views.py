@@ -8,6 +8,7 @@ def home(request):
 	return render(request, 'home.html')
 
 def lake_detail(request, slug):
+	lakes = Lake.objects.order_by('-name')
 	try:
 		lake = Lake.objects.get(slug=slug)
 	except Lake.DoesNotExist:

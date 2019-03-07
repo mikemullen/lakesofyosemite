@@ -8,3 +8,7 @@
 # Ignore notes file
 
 notes
+
+# Ignore media files
+
+/media

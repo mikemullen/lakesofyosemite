@@ -1,8 +1,23 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<button class="prevButton">Prev</button>
-<button class="nextButton">Next</button>
+
+<!--
+<div>
+		<ul class="fulllist">
+			{% for lake in lakes %}
+				<li>
+					<a href="{% url 'lake_detail' lake.slug %}">{{ lake.name }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+
+
+
+<a href="{% url 'lake_images' lake.slug %}"><button class="prevButton">Prev</button></a>
+
+<button class="nextButton">Next</button> -->
 <div class="lakecard">
 		<div class="statsicon"><img src="{% static 'images/stats_icon.svg' %}" alt="Lake Stats"></div>
 		<h2 class="lakename">{{ lake.name }}</h2>
