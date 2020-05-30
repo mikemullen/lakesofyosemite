@@ -14,12 +14,20 @@ class Lake(models.Model):
 	imagedate = models.DateField(blank=True, null=True)
 	locationmap = models.FileField(upload_to="locationmaps", blank=True)
 	lakeoutline = models.FileField(upload_to="lakeoutlines", blank=True)
+	trailhead = models.ManyToManyField('Trailhead', blank=True)
+	traildistance = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
 
 class Drainage(models.Model):
 	name = models.CharField(max_length=100)
 	flows_into = models.CharField(max_length=100, blank=True)
 	terminal = models.BooleanField()
 
+
+	def __str__(self):
+		return self.name
+
+class Trailhead(models.Model):
+	name = models.CharField(max_length= 100)
 
 	def __str__(self):
 		return self.name
