@@ -12,7 +12,7 @@
 	<div class="topbar">
 		<header>
 			<a href="{% url 'home' %}"><span class="logo">Lakes of Yosemite</span></a>
-			<span class="mainnav"><a href="#">About</a> | <a href="{% url 'lakes_lists' %}">Lakes</a> | <a href="#">Notes</a></span>
+			<span class="mainnav"><a href="#">About</a> | <a href="{% url 'lakes_lists' %}">Lakes</a> <!--| <a href="#">Notes</a>--></span>
 		</header>
 	</div>
 	<div class="mainstage">
@@ -22,18 +22,17 @@
 	<div class="bottombar">
 		<footer>
 			<div class="footdate">
-				<p>Last Updated: May 10, 2019</p>
-				<p>Copyright 2019</p>
-				<p>Web Design by Mullen Design</p>
+				<p>Last Updated: June 1, 2020</p>
+				<p>Copyright 2020 by Mike Mullen</p>
 			</div>
 			<div class="footsocial"><img src="{% static 'images/Instagram.svg' %}"></div>
 			<div class="footlinks">
 				<ul>
-					<li><a href="#">Contact</a></li>
+					<li><a href="{% url 'home' %}">Home</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="{% url 'lakes_lists' %}">Lakes</a></li>
-					<li><a href="#">Notes</a></li>
-					<li><a href="{% url 'home' %}">Home</a></li>
+					<li><a href="#">Contact</a></li>
+					<!--<li><a href="#">Notes</a></li>-->
 				</ul>
 			</div>
 		</footer>
