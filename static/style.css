@@ -55,6 +55,7 @@ header {
 a {
 	text-decoration: none;
 	text-transform: uppercase;
+	font-weight: 600;
 }
 
 a:link {
@@ -134,7 +135,30 @@ a:hover {
 	grid-row: 1;
 }
 
-/** Prev and Next Buttons **/
+/** Prev, Next, and nav Buttons **/
+
+.navbtn {
+	font-weight: 600;
+	font-size: small;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	border: 1px solid #e6e6e6;
+	border-radius: 4px;
+	padding: 4px 20px 4px 20px;
+	margin-top: 30px;
+}
+a.navbtn {
+	border-color: #7bbceb;
+	/**background-color: #f8f8f8;**/
+}
+
+a:hover.navbtn {
+	background-color: #f8f8f8;
+}
+/** applied to Photo button when there is no photo yet **/
+.nophoto {
+	border: none;
+}
 
 .prevButton {
 	position: absolute;
@@ -203,26 +227,36 @@ a:hover {
 	border-bottom: 1px solid #e6e6e6;
 	grid-column: 4 / 5;
 	grid-row: 1;
+	text-align: right;
+	padding-top: 10px
 }
-
+/**
 .photoicon img {
 	height: 2.4em;
 	float: right;
 }
-
+**/
 .statsicon {
 	border-bottom: 1px solid #e6e6e6;
 	grid-column: 1 / 2;
 	grid-row: 1;
+	text-align: left;
+	padding-top: 10px
 }
-
+/**
 .statsicon img {
 	height: 2.4em;
 
 	float: left;
 }
 
-/**.lakename img {
+a.statsicon img {
+	height: 2.4em;
+	color: red;
+	float: right;
+}
+
+.lakename img {
 	height: 1em;
 	vertical-align: -.15em;
 }**/

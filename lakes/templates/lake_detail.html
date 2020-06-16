@@ -19,9 +19,17 @@
 
 <button class="nextButton">Next</button> -->
 <div class="lakecard">
-		<div class="statsicon"><img src="{% static 'images/stats_icon.svg' %}" alt="Lake Stats"></div>
+		<!--<div class="statsicon"><img src="{% static 'images/stats_icon.svg' %}" alt="Lake Stats"></div> old nav with graphic-->
+		<div class="statsicon"><span class="navbtn">Stats / Maps</span></div>
 		<h2 class="lakename">{{ lake.name }}</h2>
-		<div class="photoicon"><a href="{% url 'lake_images' lake.slug %}"><img src="{% static 'images/photo_icon.svg' %}" alt="Lake Photos"></a></div>
+		<div class="photoicon">
+		{% if lake.image %}
+		<a class="navbtn" href="{% url 'lake_images' lake.slug %}">Photo</a>
+		{% else %}
+		<span class="navbtn nophoto">No Photo Yet</span>
+		{% endif %}
+		</div>
+		
 		<div class="elevation">elevation in feet:</div>
 		<div class="size">surface area in acres:</div>
 		<div class="location">lat lon location:</div>

@@ -3,11 +3,11 @@
 {% block content %}
 
 <div class="lakecard">
-	<div class="statsicon"><a href="{% url 'lake_detail' lake.slug %}"><img src="{% static 'images/stats_icon.svg' %}" alt="Lake Stats"></a></div>
+	<div class="statsicon"><a class="navbtn" href="{% url 'lake_detail' lake.slug %}">Stats / Maps</a></div>
 	<h2 class="lakename">{{ lake.name }}</h2>
-	<div class="photoicon"><img src="{% static 'images/photo_icon.svg' %}" alt="Lake Photos"></div>
+	<div class="photoicon"><span class="navbtn">Photo</span></div>
 	<div class="lakeimg"><img src="{{ lake.image.url }}"></div>
-	<div class="lakeimgdetails">{{ lake.elevation }} |  {{ lake.imagedate|date:"F j, Y" }} </div>
+	<div class="lakeimgdetails">{{ lake.imagedate|date:"F j, Y" }} </div>
 </div>
 
 {% endblock %}
