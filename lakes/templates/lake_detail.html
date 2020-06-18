@@ -13,11 +13,11 @@
 		</ul>
 	</div>
 
+-->
 
+<a href="{% url 'lake_detail' prevlake.slug %}"><button class="prevButton">Prev {{ prevlake.name }}</button></a>
 
-<a href="{% url 'lake_images' lake.slug %}"><button class="prevButton">Prev</button></a>
-
-<button class="nextButton">Next</button> -->
+<a href="{% url 'lake_detail' nextlake.slug %}"><button class="nextButton">Next {{ nextlake.name }}</button></a> 
 <div class="lakecard">
 		<!--<div class="statsicon"><img src="{% static 'images/stats_icon.svg' %}" alt="Lake Stats"></div> old nav with graphic-->
 		<div class="statsicon"><span class="navbtn">Stats / Maps</span></div>
@@ -30,7 +30,7 @@
 		{% endif %}
 		</div>
 		
-		<div class="elevation">elevation in feet:</div>
+		<div class="elevation">elevation in feet: INDEX {{ index }}</div>
 		<div class="size">surface area in acres:</div>
 		<div class="location">lat lon location:</div>
 		<div class="lakeelevation">{{ lake.elevation }}</div>
