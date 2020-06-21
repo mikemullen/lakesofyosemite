@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
 <!--
 <div>
 		<ul class="fulllist">
@@ -14,14 +13,16 @@
 	</div>
 
 -->
+<!--testing previous button graphic option
+<a href="{% url 'lake_detail' prevlake.slug %}"><div class="prevButton"><img src="{% static 'images/prev.svg' %}" alt="Previous lake icon"></div></a>-->
 
-<a href="{% url 'lake_detail' prevlake.slug %}"><button class="prevButton">Prev {{ prevlake.name }}</button></a>
-
-<a href="{% url 'lake_detail' nextlake.slug %}"><button class="nextButton">Next {{ nextlake.name }}</button></a> 
+<!--<a href="{% url 'lake_detail' nextlake.slug %}"><button class="nextButton">Next {{ nextlake.name }}</button></a> -->
 <div class="lakecard">
 		<!--<div class="statsicon"><img src="{% static 'images/stats_icon.svg' %}" alt="Lake Stats"></div> old nav with graphic-->
 		<div class="statsicon"><span class="navbtn">Stats / Maps</span></div>
-		<h2 class="lakename">{{ lake.name }}</h2>
+		<div class="lakename">
+		<!--<a href="{% url 'lake_detail' prevlake.slug %}"><img src="{% static 'images/prevoff.svg' %}" alt="Previous lake icon"></a> another previous lake test -->
+		{{ lake.name }}</div>
 		<div class="photoicon">
 		{% if lake.image %}
 		<a class="navbtn" href="{% url 'lake_images' lake.slug %}">Photo</a>
@@ -29,8 +30,10 @@
 		<span class="navbtn nophoto">No Photo Yet</span>
 		{% endif %}
 		</div>
-		
-		<div class="elevation">elevation in feet: INDEX {{ index }}</div>
+		<div class="prev">previous lake: <a href="{% url 'lake_detail' prevlake.slug %}">{{ prevlake.name }}</a></div>
+		<div class="sortedby">all lakes sorted a to z</div>
+		<div class="next">next lake: <a href="{% url 'lake_detail' nextlake.slug %}">{{ nextlake.name }}</a></div>
+		<div class="elevation">elevation in feet:</div>
 		<div class="size">surface area in acres:</div>
 		<div class="location">lat lon location:</div>
 		<div class="lakeelevation">{{ lake.elevation }}</div>
