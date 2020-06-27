@@ -426,6 +426,12 @@ a.statsicon img {
 	
 }
 
+.listdisplay img {
+	height: .75em;
+	vertical-align: baseline;
+	padding-left: 2px;
+}
+
 /** Footer Styles **/
 
 .bottombar {

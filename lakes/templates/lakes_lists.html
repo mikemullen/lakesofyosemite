@@ -7,6 +7,12 @@
 		<ul class="fulllist">
 			{% for lake in lakes %}
 				<li>
+					
+					{% if lake.image %}
+					    <img src="{% static 'images/visited.svg' %}">
+					{% else %}
+						<img src="{% static 'images/tovisit.svg' %}">
+					{% endif %}
 					<a href="{% url 'lake_detail' lake.slug %}">{{ lake.name }}</a>
 				</li>
 			{% endfor %}
