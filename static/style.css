@@ -202,8 +202,9 @@ a:hover.prevButton {
 
 .lakeimg {
 	grid-column: 1 / 5;
-	grid-row: 2;
+	grid-row: 3;
 	padding: 10px 10px 0px 10px;
+	border-top: 1px solid #e6e6e6;
 	border-left: 1px solid #e6e6e6;
 	border-right: 1px solid #e6e6e6;
 }
@@ -216,7 +217,7 @@ a:hover.prevButton {
 	font-size: small;
 	font-weight: 600;
 	grid-column: 1 / 5;
-	grid-row: 3;
+	grid-row: 4;
 	padding-bottom: 5px;
 	border-left: 1px solid #e6e6e6;
 	border-right: 1px solid #e6e6e6;
@@ -429,7 +430,7 @@ a.statsicon img {
 .listdisplay img {
 	height: .75em;
 	vertical-align: baseline;
-	padding-left: 2px;
+	padding-right: 2px;
 }
 
 /** Footer Styles **/

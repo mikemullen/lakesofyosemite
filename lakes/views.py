@@ -31,11 +31,26 @@ def lake_detail(request, slug):
 												'index': index})
 
 def lake_images(request, slug):
+	pholakes = Lake.objects.filter(image__contains='.jpg').order_by('name')
+	total = pholakes.count()
 	try:
 		lake = Lake.objects.get(slug=slug)
+		index = pholakes.filter(name__lt = lake.name).count()
+		if index == 0:
+			nextlake = pholakes[index +1]
+			prevlake = pholakes[total -1]
+		elif index == total -1:
+			nextlake = pholakes[0]
+			prevlake = pholakes[index -1]
+		else:
+			nextlake = pholakes[index +1]
+			prevlake = pholakes[index -1]
 	except Lake.DoesNotExist:
 		raise Http404('Lake not found')
-	return render(request, 'lake_images.html', {'lake': lake})
+	return render(request, 'lake_images.html', {'lake': lake,
+												'nextlake': nextlake,
+												'prevlake': prevlake,
+												'index': index})
 
 def lakes_lists(request):
 	lakes = Lake.objects.order_by('name')
