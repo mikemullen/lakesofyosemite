@@ -19,7 +19,7 @@
 <!--<a href="{% url 'lake_detail' nextlake.slug %}"><button class="nextButton">Next {{ nextlake.name }}</button></a> -->
 <div class="lakecard">
 		<!--<div class="statsicon"><img src="{% static 'images/stats_icon.svg' %}" alt="Lake Stats"></div> old nav with graphic-->
-		<div class="statsicon"><span class="navbtn">Stats / Maps</span></div>
+		<div class="statsicon"><span class="navbtn">Details</span></div>
 		<div class="lakename">
 		<!--<a href="{% url 'lake_detail' prevlake.slug %}"><img src="{% static 'images/prevoff.svg' %}" alt="Previous lake icon"></a> another previous lake test -->
 		{{ lake.name }}</div>
@@ -38,7 +38,9 @@
 		<div class="location">lat lon location:</div>
 		<div class="lakeelevation">{{ lake.elevation }}</div>
 		<div class="lakesize">{{ lake.size }}</div>
-		<div class="lakelatlon">{{ lake.lat }}, {{ lake.lon }}</div>
+		<div class="lakelatlon">
+			<a href="https://caltopo.com/map.html#ll={{ lake.lat }},{{ lake.lon }}&z=14&b=t" target="_blank">{{ lake.lat }}, {{ lake.lon }}</a>
+		</div>
 		<div class="lakeoutline"><img src="{{ lake.lakeoutline.url }}"></div>
 		<div class="lakemap"><img src="{{ lake.locationmap.url }}"></div>
 		<!-- Removed temporarily to simplfy launch moved to 2.0

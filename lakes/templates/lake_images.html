@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="lakecard">
-	<div class="statsicon"><a class="navbtn" href="{% url 'lake_detail' lake.slug %}">Stats / Maps</a></div>
+	<div class="statsicon"><a class="navbtn" href="{% url 'lake_detail' lake.slug %}">Details</a></div>
 	<h2 class="lakename">{{ lake.name }}</h2>
 	<div class="photoicon"><span class="navbtn">Photo</span></div>
 	<div class="prev">previous lake: <a href="{% url 'lake_images' prevlake.slug %}">{{ prevlake.name }}</a></div>
