@@ -481,3 +481,13 @@ footer a {
 	list-style: none;
 	margin: 0;
 }
+
+/** Misc formatting styles **/
+
+.pushleft {
+	padding-right: 20px;
+}
+
+.pushright {
+	padding-left: 20px;
+}

@@ -6,11 +6,12 @@
 	<div class="statsicon"><a class="navbtn" href="{% url 'lake_detail' lake.slug %}">Details</a></div>
 	<h2 class="lakename">{{ lake.name }}</h2>
 	<div class="photoicon"><span class="navbtn">Photo</span></div>
-	<div class="prev">previous lake: <a href="{% url 'lake_images' prevlake.slug %}">{{ prevlake.name }}</a></div>
+	<div class="prev">previous: <a href="{% url 'lake_images' prevlake.slug %}">{{ prevlake.name }}</a></div>
 	<div class="sortedby">photographed lakes only | sorted a to z</div>
-	<div class="next">next lake: <a href="{% url 'lake_images' nextlake.slug %}">{{ nextlake.name }}</a></div>
+	<div class="next">next: <a href="{% url 'lake_images' nextlake.slug %}">{{ nextlake.name }}</a></div>
 	<div class="lakeimg"><img src="{{ lake.image.url }}"></div>
-	<div class="lakeimgdetails">{{ lake.imagedate|date:"F j, Y" }} </div>
+	<div class="lakeimgdetails">
+		<span class="pushleft">{{ lake.imagedate|date:"F j, Y" }}</span>&#8226<span class="pushright">{{ lake.elevation }}'</span> </div>
 </div>
 
 {% endblock %}
