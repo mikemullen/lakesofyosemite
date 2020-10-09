@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath lakesofyosemite lakesofyosemite.wsgi --log-file -
+web: gunicorn --pythonpath lakesofyosemite lakesofyosemite.deploy --log-file -
