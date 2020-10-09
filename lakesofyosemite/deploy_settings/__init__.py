@@ -5,6 +5,8 @@ from lakesofyosemite.settings import *
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
+DISABLE_COLLECTSTATIC=1
+
 ALLOWED_HOSTS = [
 	'localhost',
 	'.herokuapp.com',
