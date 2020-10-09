@@ -3,6 +3,7 @@
 {% block content %}
 <div class="listdisplay">
 	<h1>Explore the <span class="bigblue">167</span> named lakes of Yosemite</h1>
+
 	<div>
 		<ul class="fulllist">
 			{% for lake in lakes %}
@@ -19,26 +20,40 @@
 		</ul>
 	</div>
 	
-		<div class="">
+		<div>
 			<h2>Top 10 Lakes by Elevation</h2>
-			<ul>
+			<ul class="toptenlist">
 				{% for lake in lakesTopTenByElevation %}
 					<a href="{% url 'lake_detail' lake.slug %}">
-						<li>{{ lake.name|capfirst }} - {{ lake.elevation }}'</li>
+						<li>
+						{% if lake.image %}
+					    <img src="{% static 'images/visited.svg' %}">
+						{% else %}
+						<img src="{% static 'images/tovisit.svg' %}">
+						{% endif %}
+						{{ lake.name|capfirst }} - {{ lake.elevation }}'
+						</li>
 					</a>
 				{% endfor %}
 			</ul>
 		</div>
-		<div class="">
+		<div>
 			<h2>Top 10 Lakes by Area</h2>
-			<ul>
+			<ul class="toptenlist">
 				{% for lake in lakesTopTenByArea %}
 					<a href="{% url 'lake_detail' lake.slug %}">
-						<li>{{ lake.name|capfirst }} - {{ lake.size }} acres</li>
+						<li>
+						{% if lake.image %}
+					    <img src="{% static 'images/visited.svg' %}">
+						{% else %}
+						<img src="{% static 'images/tovisit.svg' %}">
+						{% endif %}
+						{{ lake.name|capfirst }} - {{ lake.size }} acres
+						</li>
 					</a>
 				{% endfor %}
 			</ul>
 		</div>
-
+	<div class="lakeskey"><img src="{% static 'images/visited.svg' %}"> = photographed <img src="{% static 'images/tovisit.svg' %}"> = to photograph</div>
 </div>
 {% endblock %}

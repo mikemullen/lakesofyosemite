@@ -8,7 +8,7 @@ body {
 	background-color: #e6e6e6;
 }
 
-h2 {
+h2, h1 {
 	margin: 0;
 }
 
@@ -405,6 +405,13 @@ a.statsicon img {
 	padding-left: 1.25em;
 }
 
+.lakeskey {
+	padding-top: .6em;
+	padding-left: 2.5em;
+	padding-bottom: 1.25em;
+	border-top: 1px solid #e6e6e6;
+}
+
 .fulllist {
 	list-style: none;
 	column-count: 3;
@@ -420,6 +427,10 @@ a.statsicon img {
     column-gap: 3em;
     padding-bottom: 1.25em;
     border-bottom: 1px solid #e6e6e6;
+}
+
+.toptenlist {
+	list-style: none;
 }
 
 .listdisplay a {

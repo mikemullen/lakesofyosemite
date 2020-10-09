@@ -5,7 +5,18 @@ from django.http import Http404
 from .models import Lake
 
 def home(request):
-	return render(request, 'home.html')
+	lakes = Lake.objects.order_by('name')
+	photographedlakes = 0
+	tophotographlakes = 0
+	for lake in lakes:
+		if lake.image:
+			photographedlakes = photographedlakes + 1
+		else:
+			tophotographlakes = tophotographlakes + 1
+
+
+	return render(request, 'home.html', {'photographedlakes': photographedlakes,
+										 'tophotographlakes': tophotographlakes})
 
 def lake_detail(request, slug):
 	lakes = Lake.objects.order_by('name')
