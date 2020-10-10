@@ -148,5 +148,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'lakesofyosemite/media')
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
