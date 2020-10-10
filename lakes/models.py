@@ -8,7 +8,7 @@ class Lake(models.Model):
 	size = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
 	lat = models.DecimalField(max_digits=6, decimal_places=4, null=True)
 	lon = models.DecimalField(max_digits=7, decimal_places=4, null=True)
-	trailaccess = models.CharField(choices=TRAIL_ACCESS_CHOICES, max_length=1, blank=True)
+	trailaccess = models.CharField(choices=TRAIL_ACCESS_CHOICES, max_length=10, blank=True)
 	drainages = models.ManyToManyField('Drainage', blank=True)
 	image = models.ImageField(upload_to="lake_images", blank=True)
 	imagedate = models.DateField(blank=True, null=True)
