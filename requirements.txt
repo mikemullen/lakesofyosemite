@@ -1,6 +1,9 @@
-Django==1.11.7
-gunicorn==19.10.0
 dj-database-url==0.4.1
+Django==1.11.29
+django-storages==1.9.1
+dropbox==10.5.0
+gunicorn==19.10.0
+Pillow==5.0.0
 psycopg2==2.7.4
+six==1.15.0
 whitenoise==3.2.1
-Pillow
