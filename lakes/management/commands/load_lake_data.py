@@ -28,6 +28,6 @@ class Command(BaseCommand):
             print(lake.lat)
             lake.lon = Decimal(lake_lat_lon_raw[1])
             print(lake.lon)
-            lake.trailaccess = row['trail access']
-            print(lake.trailaccess)
+            lake.slug = row['slug']
+            print(lake.slug)
             lake.save()
