@@ -3,7 +3,7 @@ import dj_database_url
 
 from lakesofyosemite.settings import *
 
-DEBUG = False
+DEBUG = true
 TEMPLATE_DEBUG = DEBUG
 
 
