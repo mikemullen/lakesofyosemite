@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-import dropbox
 
 def get_env_variable(var_name):
     try:
@@ -143,7 +142,4 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(BASE_DIR, 'lakesofyosemite/media')
 MEDIA_URL = '/media/'
 
-MEDIAFILES_LOCATION = 'media'
-DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
-DROPBOX_OAUTH2_TOKEN = 'Mq6WgzMy9iEAAAAAAAAAAWhCs9ijx2IMJCccKZd3uPaV830sZS3-h6Giv3Y7OtT3'
 
