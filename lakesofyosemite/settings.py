@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'lakes.apps.LakesConfig',
-    'storages',
 ]
 
 MIDDLEWARE = [

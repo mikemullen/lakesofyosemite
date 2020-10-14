@@ -12,6 +12,10 @@ ALLOWED_HOSTS = [
 	'.herokuapp.com',
 ]
 
+INSTALLED_APPS = [
+    'storages',
+]
+
 SECRET_KEY = get_env_variable("SECRET_KEY")
 
 db_from_env = dj_database_url.config()
