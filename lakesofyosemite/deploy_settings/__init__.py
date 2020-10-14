@@ -12,9 +12,6 @@ ALLOWED_HOSTS = [
 	'.herokuapp.com',
 ]
 
-INSTALLED_APPS = [
-    'storages',
-]
 
 SECRET_KEY = get_env_variable("SECRET_KEY")
 
