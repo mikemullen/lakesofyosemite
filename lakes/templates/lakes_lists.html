@@ -10,9 +10,9 @@
 				<li>
 					<a href="{% url 'lake_detail' lake.slug %}">
 					{% if lake.image %}
-					    <img src="{% static 'images/visited.svg' %}">
+					    <img src="{% static 'images/visited.svg' %}" alt="blue dot indicating lake has been photographed">
 					{% else %}
-						<img src="{% static 'images/tovisit.svg' %}">
+						<img src="{% static 'images/tovisit.svg' %}" alt="red circle indicating lake has not been photographed">
 					{% endif %}
 					{{ lake.name }}</a>
 				</li>
@@ -27,9 +27,9 @@
 					<a href="{% url 'lake_detail' lake.slug %}">
 						<li>
 						{% if lake.image %}
-					    <img src="{% static 'images/visited.svg' %}">
+					    <img src="{% static 'images/visited.svg' %}" alt="blue dot indicating lake has been photographed">
 						{% else %}
-						<img src="{% static 'images/tovisit.svg' %}">
+						<img src="{% static 'images/tovisit.svg' %}" alt="red circle indicating lake has not been photographed">
 						{% endif %}
 						{{ lake.name|capfirst }} - {{ lake.elevation }}'
 						</li>
@@ -44,9 +44,9 @@
 					<a href="{% url 'lake_detail' lake.slug %}">
 						<li>
 						{% if lake.image %}
-					    <img src="{% static 'images/visited.svg' %}">
+					    <img src="{% static 'images/visited.svg' %}" alt="blue dot indicating lake has been photographed">
 						{% else %}
-						<img src="{% static 'images/tovisit.svg' %}">
+						<img src="{% static 'images/tovisit.svg' %}" alt="red circle indicating lake has not been photographed">
 						{% endif %}
 						{{ lake.name|capfirst }} - {{ lake.size }} acres
 						</li>
@@ -54,6 +54,6 @@
 				{% endfor %}
 			</ul>
 		</div>
-	<div class="lakeskey"><img src="{% static 'images/visited.svg' %}"> = photographed <img src="{% static 'images/tovisit.svg' %}"> = to photograph</div>
+	<div class="lakeskey"><img src="{% static 'images/visited.svg' %}" alt="blue dot"> = photographed &nbsp;&nbsp;&nbsp; <img src="{% static 'images/tovisit.svg' %}" alt="red circle"> = to photograph</div>
 </div>
 {% endblock %}

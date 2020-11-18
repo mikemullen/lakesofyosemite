@@ -41,8 +41,12 @@
 		<div class="lakelatlon">
 			<a href="https://caltopo.com/map.html#ll={{ lake.lat }},{{ lake.lon }}&z=14&b=t" target="_blank">{{ lake.lat }}, {{ lake.lon }}</a>
 		</div>
-		<div class="lakeoutline"><img src="{{ lake.lakeoutline.url }}"></div>
-		<div class="lakemap"><img src="{{ lake.locationmap.url }}"></div>
+		<div class="lakeoutline">
+			<img src="{{ lake.lakeoutline.url }}" alt="Topographic map of area surrounding {{ lake.name }}">
+		</div>
+		<div class="lakemap">
+			<img src="{{ lake.locationmap.url }}" alt="Outline of Yosemite National Park showing location of {{ lake.name }}">
+		</div>
 		<!-- Removed temporarily to simplfy launch moved to 2.0
 		<div class="lakedrainagelable">Trailhead:</div>
 		<div class="lakedrainagetree">{{ lake.trailhead }} : {{ lake.traildistance }}</div>
