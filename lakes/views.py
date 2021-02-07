@@ -72,3 +72,5 @@ def lakes_lists(request):
 												'lakesTopTenByElevation': lakesTopTenByElevation,
 												'lakesTopTenByArea': lakesTopTenByArea})
 	
+def about(request):
+	return render(request, 'about.html')

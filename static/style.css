@@ -135,6 +135,40 @@ a:hover {
 	grid-row: 1;
 }
 
+/** Article pages**/
+
+.textpage {
+	font-size: 1.5vw;
+	font-weight: bold;
+	text-align: left;
+	
+	width: 88%;
+	max-width: 800px;
+	margin: auto;
+	background-color: white;
+}
+
+a.textpage {
+	text-transform: none;
+	
+}
+
+a:link {
+	color: #585858;
+}
+
+a:visited {
+	color: #585858;
+}
+
+a:focus {
+	color: #7bbceb;
+}
+
+a:hover {
+	color: #7bbceb;
+}
+
 /** Prev, Next, and nav Buttons **/
 
 .navbtn {
@@ -189,10 +223,9 @@ a:hover.prevButton {
 	font-size: large;
 	font-weight: 100;
 	text-align: center;
-
+	
 	width: 88%;
 	max-width: 1800px;
-
 	margin: auto;
 	background-color: white;
 	
@@ -500,4 +533,9 @@ footer a {
 
 .pushright {
 	padding-left: 20px;
+}
+
+.breathingroom {
+	padding-bottom: 2px;
+	padding-top: 2px;
 }

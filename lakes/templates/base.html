@@ -6,13 +6,14 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 	<link href="https://fonts.googleapis.com/css?family=Muli:200,600" rel="stylesheet">
+	<link rel="shortcut icon" type="image" href="{% static 'favicon.ico' %}">
 	<title>Lakes of Yosemite</title>
 </head>
 <body>
 	<div class="topbar">
 		<header>
 			<a href="{% url 'home' %}"><span class="logo">Lakes of Yosemite</span></a>
-			<span class="mainnav"><a href="#">About</a> | <a href="{% url 'lakes_lists' %}">Lakes</a> <!--| <a href="#">Notes</a>--></span>
+			<span class="mainnav"><a href="{% url 'about' %}">About</a> | <a href="{% url 'lakes_lists' %}">Lakes</a> <!--| <a href="#">Notes</a>--></span>
 		</header>
 	</div>
 	<div class="mainstage">
@@ -29,7 +30,7 @@
 			<div class="footlinks">
 				<ul>
 					<li><a href="{% url 'home' %}">Home</a></li>
-					<li><a href="#">About</a></li>
+					<li><a href="{% url 'about' %}">About</a></li>
 					<li><a href="{% url 'lakes_lists' %}">Lakes</a></li>
 					<li><a href="#">Contact</a></li>
 					<!--<li><a href="#">Notes</a></li>-->
