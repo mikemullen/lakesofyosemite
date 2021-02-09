@@ -29,12 +29,13 @@ h2, h1 {
 	border-bottom: 1px solid #e6e6e6;
 }
 
+
 header {
 	width: 90%;
 	max-width: 1800px;
 	margin: auto;
 	position: relative;
-		font-weight: 600;
+	font-weight: 600;
 }
 
 
@@ -46,6 +47,7 @@ header {
 }
 
 .mainnav {
+	text-transform: uppercase;
 	text-align: right;
 	position: absolute;
 	right: 4px;
@@ -54,7 +56,6 @@ header {
 
 a {
 	text-decoration: none;
-	text-transform: uppercase;
 	font-weight: 600;
 }
 
@@ -135,6 +136,46 @@ a:hover {
 	grid-row: 1;
 }
 
+/** Article pages**/
+
+.textpage {
+	font-size: 1.35em;
+	font-weight: 700;
+	text-align: left;
+	
+	width: 88%;
+	max-width: 800px;
+	margin: auto;
+	background-color: white;
+}
+
+.imgcaption {
+	font-size: small;
+	margin-top: 0;
+}
+
+/** Styling for Article links depends on this being the only place <p> occur **/
+
+p a {
+	text-decoration: underline;
+}
+
+p a:link {
+	color: #7bbceb;
+}
+
+p a:visited {
+	color: #7bbceb;
+}
+
+p a:focus {
+	color: #585858;
+}
+
+p a:hover {
+	color: #585858;
+}
+
 /** Prev, Next, and nav Buttons **/
 
 .navbtn {
@@ -189,10 +230,9 @@ a:hover.prevButton {
 	font-size: large;
 	font-weight: 100;
 	text-align: center;
-
+	
 	width: 88%;
 	max-width: 1800px;
-
 	margin: auto;
 	background-color: white;
 	
@@ -500,4 +540,9 @@ footer a {
 
 .pushright {
 	padding-left: 20px;
+}
+
+.breathingroom {
+	padding-bottom: 2px;
+	padding-top: 2px;
 }
