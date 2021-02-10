@@ -33,9 +33,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'fd^*tx+@+mlp4p-qe(cw==+v=6yk=wb19uekvzpz#7#u36cz#%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = Fales
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*','lakesofyosemite.com']
 
 
 # Application definition
