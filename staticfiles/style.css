@@ -12,6 +12,28 @@ h2, h1 {
 	margin: 0;
 }
 
+a {
+	text-decoration: none;
+	font-weight: 600;
+}
+
+a:link {
+	color: #585858;
+}
+
+a:visited {
+	color: #585858;
+}
+
+a:focus {
+	color: #7bbceb;
+}
+
+a:hover {
+	color: #7bbceb;
+}
+
+
 /** tester class **/
 
 .test {
@@ -28,6 +50,7 @@ h2, h1 {
 	background-color: white;
 	border-bottom: 1px solid #e6e6e6;
 }
+
 
 
 header {
@@ -54,27 +77,6 @@ header {
 	bottom: 5px;
 }
 
-a {
-	text-decoration: none;
-	font-weight: 600;
-}
-
-a:link {
-	color: #585858;
-}
-
-a:visited {
-	color: #585858;
-}
-
-a:focus {
-	color: #7bbceb;
-}
-
-a:hover {
-	color: #7bbceb;
-}
-
 .mainstage {
 	width: 100%;
 	background-color: white;
@@ -89,7 +91,7 @@ a:hover {
 
 .mainmap {
 	width: 90%;
-	max-width: 1800px;
+	max-width: 1400px;
 	margin: auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -189,7 +191,9 @@ p a:hover {
 	margin-top: 30px;
 }
 a.navbtn {
+	color: #7bbceb;
 	border-color: #7bbceb;
+	text-decoration: none;
 	/**background-color: #f8f8f8;**/
 }
 
@@ -238,6 +242,26 @@ a:hover.prevButton {
 	
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.lakecard a {
+	text-decoration: none;
+}
+
+.lakecard a:link {
+	color: #7bbceb;
+}
+
+.lakecard a:visited {
+	color: #7bbceb;
+}
+
+.lakecard a:focus {
+	color: #585858;
+}
+
+.lakecard a:hover {
+	color: #585858;
 }
 
 .lakeimg {
