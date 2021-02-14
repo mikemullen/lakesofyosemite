@@ -11,16 +11,16 @@
 		<span class="navbtn nophoto">No Photo Yet</span>
 		{% endif %}
 		</div>
-		<div class="prev breathingroom">previous: <a href="{% url 'lake_detail' prevlake.slug %}">{{ prevlake.name }}</a></div>
+		<div class="prev breathingroom">Previous: <a href="{% url 'lake_detail' prevlake.slug %}">{{ prevlake.name }}</a></div>
 		<div class="sortedby breathingroom">all lakes | sorted a to z</div>
-		<div class="next breathingroom">next: <a href="{% url 'lake_detail' nextlake.slug %}">{{ nextlake.name }}</a></div>
+		<div class="next breathingroom">Next: <a href="{% url 'lake_detail' nextlake.slug %}">{{ nextlake.name }}</a></div>
 		<div class="elevation breathingroom">elevation in feet:</div>
 		<div class="size breathingroom">surface area in acres:</div>
 		<div class="location breathingroom">lat lon location:</div>
 		<div class="lakeelevation breathingroom">{{ lake.elevation }}</div>
 		<div class="lakesize breathingroom">{{ lake.size }}</div>
 		<div class="lakelatlon breathingroom">
-			<a href="https://caltopo.com/map.html#ll={{ lake.lat }},{{ lake.lon }}&z=14&b=t" target="_blank">{{ lake.lat }}, {{ lake.lon }}</a>
+			<a href="https://caltopo.com/map.html#ll={{ lake.lat }},{{ lake.lon }}&z=14&b=t&o=r&n=0.25" target="_blank">{{ lake.lat }}, {{ lake.lon }}</a>
 		</div>
 		<div class="lakeoutline">
 			<img src="{{ lake.lakeoutline.url }}" alt="Topographic map of area surrounding {{ lake.name }}">
