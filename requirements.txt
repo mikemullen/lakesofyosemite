@@ -1,5 +1,5 @@
-
-Django==3.6.12
+dj-database-url==0.5.0
+Django==3.1.6
 django-storages==1.9.1
 dropbox==10.5.0
 gunicorn==19.10.0
