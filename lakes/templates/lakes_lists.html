@@ -8,13 +8,15 @@
 		<ul class="fulllist">
 			{% for lake in lakes %}
 				<li>
-					<a href="{% url 'lake_detail' lake.slug %}">
 					{% if lake.image %}
-					    <img src="{% static 'images/visited.svg' %}" alt="blue dot indicating lake has been photographed">
+					<a href="{% url 'lake_images' lake.slug %}">
+						<img src="{% static 'images/visited.svg' %}" alt="blue dot indicating lake has been photographed">
+						{{ lake.name }}</a>
 					{% else %}
+						<a href="{% url 'lake_detail' lake.slug %}">
 						<img src="{% static 'images/tovisit.svg' %}" alt="red circle indicating lake has not been photographed">
+						{{ lake.name }}</a>
 					{% endif %}
-					{{ lake.name }}</a>
 				</li>
 			{% endfor %}
 		</ul>
@@ -24,16 +26,19 @@
 			<h2>Top 10 Lakes by Elevation</h2>
 			<ul class="toptenlist">
 				{% for lake in lakesTopTenByElevation %}
-					<a href="{% url 'lake_detail' lake.slug %}">
+					
 						<li>
 						{% if lake.image %}
+						<a href="{% url 'lake_images' lake.slug %}">
 					    <img src="{% static 'images/visited.svg' %}" alt="blue dot indicating lake has been photographed">
+						{{ lake.name|capfirst }} - {{ lake.elevation }}'</a>
 						{% else %}
+						<a href="{% url 'lake_detail' lake.slug %}">
 						<img src="{% static 'images/tovisit.svg' %}" alt="red circle indicating lake has not been photographed">
+						{{ lake.name|capfirst }} - {{ lake.elevation }}'</a>
 						{% endif %}
-						{{ lake.name|capfirst }} - {{ lake.elevation }}'
 						</li>
-					</a>
+					
 				{% endfor %}
 			</ul>
 		</div>
@@ -41,16 +46,20 @@
 			<h2>Top 10 Lakes by Area</h2>
 			<ul class="toptenlist">
 				{% for lake in lakesTopTenByArea %}
-					<a href="{% url 'lake_detail' lake.slug %}">
+					
 						<li>
 						{% if lake.image %}
+						<a href="{% url 'lake_images' lake.slug %}">
 					    <img src="{% static 'images/visited.svg' %}" alt="blue dot indicating lake has been photographed">
+					    {{ lake.name|capfirst }} - {{ lake.size }} acres</a>
 						{% else %}
+						<a href="{% url 'lake_detail' lake.slug %}">
 						<img src="{% static 'images/tovisit.svg' %}" alt="red circle indicating lake has not been photographed">
+						{{ lake.name|capfirst }} - {{ lake.size }} acres</a>
 						{% endif %}
-						{{ lake.name|capfirst }} - {{ lake.size }} acres
+						
 						</li>
-					</a>
+					
 				{% endfor %}
 			</ul>
 		</div>
