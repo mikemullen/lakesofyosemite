@@ -18,6 +18,29 @@ def home(request):
 	return render(request, 'home.html', {'photographedlakes': photographedlakes,
 										 'tophotographlakes': tophotographlakes})
 
+def lake_display(request, slug):
+	lakes = Lake.objects.order_by('name')
+	total = lakes.count()
+
+	try:
+		lake = lakes.get(slug=slug)
+		index = lakes.filter(name__lt = lake.name).count()
+		if index == 0:
+			nextlake = lakes[index +1]
+			prevlake = lakes[total -1]
+		elif index == total -1:
+			nextlake = lakes[0]
+			prevlake = lakes[index -1]
+		else:
+			nextlake = lakes[index +1]
+			prevlake = lakes[index -1]
+	except Lake.DoesNotExist:
+		raise Http404('Lake not found')
+	return render(request, 'lake_display.html', {'lake': lake,
+												'nextlake': nextlake,
+												'prevlake': prevlake,
+												'index': index})
+
 def lake_detail(request, slug):
 	lakes = Lake.objects.order_by('name')
 	total = lakes.count()

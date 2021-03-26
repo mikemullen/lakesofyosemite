@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^lakes/info/(?P<slug>[-\w]+)/$', views.lake_detail, name='lake_detail'),
     url(r'^lakes/images/(?P<slug>[-\w]+)/$', views.lake_images, name='lake_images'),
+    url(r'^lakes/(?P<slug>[-\w]+)/$', views.lake_display, name='lake_display'),
     url(r'^lakes_lists/', views.lakes_lists, name='lakes_lists'),
     url(r'^about/', views.about, name='about'),
     url(r'^contact/', views.contact, name='contact'),

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="lakedisplay">
+		
+		<h1 class="lakenamedisplay">{{ lake.name }}</h1>
+		
+		<!--
+		<div class="photoicondisplay">
+		{% if lake.image %}
+		<a class="navbtn" href="{% url 'lake_images' lake.slug %}">Photo</a>
+		{% else %}
+		<span class="navbtn nophoto">No Photo Yet</span>
+		{% endif %}
+		</div>
+		-->
+
+		<div class="prevdisplay breathingroom">Previous: <a href="{% url 'lake_display' prevlake.slug %}">{{ prevlake.name }}</a></div>
+		<div class="sortedbydisplay breathingroom">all lakes | sorted a to z</div>
+		<div class="nextdisplay breathingroom">Next: <a href="{% url 'lake_display' nextlake.slug %}">{{ nextlake.name }}</a></div>
+
+		{% if lake.image %}
+		<div class="lakeimgdisplay"><img src="{{ lake.image.url }}" alt="{{ lake.name }}"></div>
+		<div class="lakeimgdetailsdisplay">
+		<span class="pushleft">{{ lake.imagedate|date:"F j, Y" }}</span>&#8226<span class="pushright">{{ lake.elevation }}'</span> </div>
+		{% else %}
+		<div class="nophotoyet morebreathingroom">No photo yet<div class="tiny"><em>I'm looking forward to visiting soon!</em></div></div>
+		{% endif %}
+		<div class="elevationdisplay breathingroom">elevation in feet:</div>
+		<div class="sizedisplay breathingroom">surface area in acres:</div>
+		<div class="locationdisplay breathingroom">lat lon location:</div>
+		<div class="lakeelevationdisplay breathingroom">{{ lake.elevation }}</div>
+		<div class="lakesizedisplay breathingroom">{{ lake.size }}</div>
+		<div class="lakelatlondisplay breathingroom">
+			<a href="https://caltopo.com/map.html#ll={{ lake.lat }},{{ lake.lon }}&z=14&b=t&o=r&n=0.25" target="_blank">{{ lake.lat }}, {{ lake.lon }}</a>
+		</div>
+		<div class="lakeoutlinedisplay">
+			<img src="{{ lake.lakeoutline.url }}" alt="Topographic map of area surrounding {{ lake.name }}">
+		</div>
+		<div class="lakemapdisplay">
+			<img src="{{ lake.locationmap.url }}" alt="Outline of Yosemite National Park showing location of {{ lake.name }}">
+		</div>
+</div>
+
+
+{% endblock %}

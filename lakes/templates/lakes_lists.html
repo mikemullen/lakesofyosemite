@@ -9,11 +9,11 @@
 			{% for lake in lakes %}
 				<li>
 					{% if lake.image %}
-					<a href="{% url 'lake_images' lake.slug %}">
+					<a href="{% url 'lake_display' lake.slug %}">
 						<img src="{% static 'images/visited.svg' %}" alt="blue dot indicating lake has been photographed">
 						{{ lake.name }}</a>
 					{% else %}
-						<a href="{% url 'lake_detail' lake.slug %}">
+						<a href="{% url 'lake_display' lake.slug %}">
 						<img src="{% static 'images/tovisit.svg' %}" alt="red circle indicating lake has not been photographed">
 						{{ lake.name }}</a>
 					{% endif %}
@@ -29,11 +29,11 @@
 					
 						<li>
 						{% if lake.image %}
-						<a href="{% url 'lake_images' lake.slug %}">
+						<a href="{% url 'lake_display' lake.slug %}">
 					    <img src="{% static 'images/visited.svg' %}" alt="blue dot indicating lake has been photographed">
 						{{ lake.name|capfirst }} - {{ lake.elevation }}'</a>
 						{% else %}
-						<a href="{% url 'lake_detail' lake.slug %}">
+						<a href="{% url 'lake_display' lake.slug %}">
 						<img src="{% static 'images/tovisit.svg' %}" alt="red circle indicating lake has not been photographed">
 						{{ lake.name|capfirst }} - {{ lake.elevation }}'</a>
 						{% endif %}
@@ -49,11 +49,11 @@
 					
 						<li>
 						{% if lake.image %}
-						<a href="{% url 'lake_images' lake.slug %}">
+						<a href="{% url 'lake_display' lake.slug %}">
 					    <img src="{% static 'images/visited.svg' %}" alt="blue dot indicating lake has been photographed">
 					    {{ lake.name|capfirst }} - {{ lake.size }} acres</a>
 						{% else %}
-						<a href="{% url 'lake_detail' lake.slug %}">
+						<a href="{% url 'lake_display' lake.slug %}">
 						<img src="{% static 'images/tovisit.svg' %}" alt="red circle indicating lake has not been photographed">
 						{{ lake.name|capfirst }} - {{ lake.size }} acres</a>
 						{% endif %}
