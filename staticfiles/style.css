@@ -52,7 +52,10 @@ a:hover {
 	border-bottom: 1px solid #e6e6e6;
 }
 
-
+.tagline {
+	font-size: 1.5vw;
+	font-style: italic;
+}
 
 header {
 	width: 90%;
@@ -143,6 +146,7 @@ header {
 .fullmapimg {
 	grid-column: 1 / 4;
 	grid-row: 1;
+	padding-top: 24px;
 }
 
 /** Article pages**/
