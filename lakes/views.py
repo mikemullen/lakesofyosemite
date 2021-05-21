@@ -98,5 +98,11 @@ def lakes_lists(request):
 def about(request):
 	return render(request, 'about.html')
 
+def notes(request):
+	return render(request, 'notes.html')
+
+def mattie(request):
+	return render(request, 'mattie.html')
+
 def contact(request):
 	return render(request, 'contact.html')

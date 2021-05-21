@@ -14,6 +14,8 @@ urlpatterns = [
     url(r'^lakes/(?P<slug>[-\w]+)/$', views.lake_display, name='lake_display'),
     url(r'^lakes_lists/', views.lakes_lists, name='lakes_lists'),
     url(r'^about/', views.about, name='about'),
+    url(r'^notes/', views.notes, name='notes'),
+    url(r'^mattie/', views.mattie, name='mattie'),
     url(r'^contact/', views.contact, name='contact'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
