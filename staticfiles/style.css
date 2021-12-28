@@ -189,6 +189,28 @@ p a:hover {
 	color: #585858;
 }
 
+/** to add styling in links inside li and other elements as needed **/
+
+a.showlinks {
+	text-decoration: underline;
+}
+
+a:link.showlinks {
+	color: #7bbceb;
+}
+
+a:visited.showlinks {
+	color: #7bbceb;
+}
+
+a:focus.showlinks {
+	color: #585858;
+}
+
+a:hover.showlinks {
+	color: #585858;
+}
+
 /** Notes Pages **/
 
 .noteimage {

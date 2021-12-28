@@ -106,3 +106,6 @@ def mattie(request):
 
 def contact(request):
 	return render(request, 'contact.html')
+
+def giving_back(request):
+	return render(request, 'giving_back.html')

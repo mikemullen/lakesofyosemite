@@ -17,5 +17,6 @@ urlpatterns = [
     url(r'^notes/', views.notes, name='notes'),
     url(r'^mattie/', views.mattie, name='mattie'),
     url(r'^contact/', views.contact, name='contact'),
+    url(r'^giving_back/', views.giving_back, name='giving_back'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
